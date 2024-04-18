@@ -32,7 +32,7 @@ export default function Sidebar({ isSidebar, handleSidebar }) {
                             {/* <div className="widget-title">Desk Office</div> */}
                             <form action="#">
                                 {/* <input type="email" placeholder="Enter Email Address" /> */}
-                                <button className="theme-btn btn-style-one"><span className="btn-title">Desk Login</span></button>
+                                <Link to="https://aicl.co.tz/login?redirect-to=%2Fapp%2Fwebsite-settings%2FWebsite%2520Settings#login"><button className="theme-btn btn-style-one"><span className="btn-title">Desk Login</span></button></Link>
                             </form>
                         </div>
                     </div>

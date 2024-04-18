@@ -65,11 +65,11 @@ export default function Footer5() {
                                             <h3 className="widget-title">Support</h3>
                                             <div className="widget-content">
                                                 <ul>
-                                                    <li><Link href="#">Live Chat</Link></li>
-                                                    <li><Link href="#">FAQ’s</Link></li>
+                                                    <li><Link href="#">Contact Us</Link></li>
+                                                    {/* <li><Link href="#"></Link></li> */}
                                                     {/* <li><Link href="#">Locations</Link></li>
                                                     <li><Link href="#">Policies</Link></li> */}
-                                                    <li><Link href="#">Resources</Link></li>
+                                                    {/* <li><Link href="#">Resources</Link></li> */}
                                                 </ul>
                                             </div>
                                         </div>
@@ -104,11 +104,11 @@ export default function Footer5() {
                     <div className="auto-container">
                         <div className="row m-0 justify-content-between">
                             <div className="copyright"><Link href="#">© {new Date().getFullYear()} </Link> ANGALIA INVESTMENT CONSORTIUM LIMITED, All Rights Reserved.</div>
-                            <ul className="menu">
+                            {/* <ul className="menu">
                                 <li><Link href="#">Privacy Policy</Link></li>
                                 <li><Link href="#">Terms &amp; Conditions</Link></li>
                                 <li><Link href="#">Site Map</Link></li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </div>

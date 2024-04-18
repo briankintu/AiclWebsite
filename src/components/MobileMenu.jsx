@@ -173,7 +173,7 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                     
                     {/*Social Links*/}
                     <div className="social-links">
-                    <button className="theme-btn btn-style-one"><span className="btn-title">Desk Login</span></button>
+                    <Link to="https://aicl.co.tz/login?redirect-to=%2Fapp%2Fwebsite-settings%2FWebsite%2520Settings#login"><button className="theme-btn btn-style-one"><span className="btn-title">Desk Login</span></button></Link>
                     
                         
                     </div>

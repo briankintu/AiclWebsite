@@ -72,7 +72,7 @@ const ContactPage = () => {
                                     </div>
                                 </div>
                                 <div className="col-lg-7">
-                                    <div className="text mb-30">Don’t hesitate to contact us, We’d love to help you. Our customer <br /> support team will work 24/7.</div>
+                                    <div className="text mb-30">Don’t hesitate to contact us, We’d love to help you. Better solutions<br /> for your business.</div>
                                 </div>
                             </div>
                             <div className="row">
@@ -102,7 +102,7 @@ const ContactPage = () => {
                                                 <div className="icon"><img src={icon52} alt="" /></div>
                                                 <h4>Mail at</h4>
                                                 <ul>
-                                                    <li><Link href="mailto:supportteam@Envolve.com">info@aicl.co.tz</Link></li>
+                                                    <li><Link href="mailto:info@aicl.co.tz">info@aicl.co.tz</Link></li>
                                                     
                                                 </ul>
                                             </div>
@@ -111,7 +111,7 @@ const ContactPage = () => {
                                 </div>
                                 <div className="col-lg-8">
                                     <div className="wrapper-box ml-lg-5">
-                                        <div className="pointer-block">
+                                        {/* <div className="pointer-block">
                                             <div className="content">
                                                 <div className="text">3333 Raleigh St, Houston, <br />TX 77021, USA.</div>
                                             </div>
@@ -132,9 +132,9 @@ const ContactPage = () => {
                                         <div className="pointer-block">
                                             <div className="content">
                                                 <div className="text">3333 Raleigh St, Houston, <br />TX 77021, USA.</div>
-                                            </div>
-                                            <div className="point"><span /></div>
-                                        </div>
+                                            </div> 
+                                            <div className="point"><span /></div> 
+                                        </div> */}
                                         <Iframe  url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.055252111594!2d39.24439001076687!3d-6.763117893205358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4df6dd2291a5%3A0xc09fec84a3f34a7a!2sAngalia%20Investment%20Consortium%20Limited!5e0!3m2!1sen!2stz!4v1709895018760!5m2!1sen!2stz"  width="770" height="437" styles={{ border: 0}} allow="fullscreen=" />
 
                                         {/* <img src={mapimg} alt="" /> */}
@@ -209,18 +209,19 @@ const ContactPage = () => {
                                                
                                     </div>
                                     <div className="col-lg-4 col-md-6 form-group">
-                                        <select className="custom-select" name="subject">
-                                            <option value="*">Discusss about</option>
-                                            <option value=".category-1">Accounting and Finance Outsourcing</option>
-                                            <option value=".category-2">Agritech Solutions</option>
-                                            <option value=".category-3">Business Process and Technology Optimizaition</option>
-                                            <option value=".category-4">Call Center Setup</option>
-                                            <option value=".category-5">Custom Enterprise Resource Planning Application - CEPRA with ERPNEXT</option>
-                                            <option value=".category-6">Mobile App Development</option>
-                                            <option value=".category-7">Physical Security Information Management</option>
-                                            <option value=".category-8">Web App & Web Design Development</option>
-                                            <option value=".category-9">UI/UX Design</option>
-                                            <option value=".category-10">Others</option>
+                                        <select className="custom-select" {...register("gender")} >
+                                            
+                                            <option value="" disabled>Discuss About..</option>
+                                            <option value="Accounting and Finance Outsourcing">Accounting and Finance Outsourcing</option>
+                                            <option value="Agritech Solutions">Agritech Solutions</option>
+                                            <option value="Business Process and Technology Optimizaition">Business Process and Technology Optimizaition</option>
+                                            <option value="Call Center Setup">Call Center Setup</option>
+                                            <option value="Custom Enterprise Resource Planning Application - CEPRA with ERPNEXT">Custom Enterprise Resource Planning Application - CEPRA with ERPNEXT</option>
+                                            <option value="Mobile App Development">Mobile App Development</option>
+                                            <option value="Physical Security Information Management">Physical Security Information Management</option>
+                                            <option value="Web App & Web Design Developmen">Web App & Web Design Development</option>
+                                            <option value="UI/UX Design">UI/UX Design</option>
+                                            <option value="Others">Others</option>
                                         </select>
                                     </div>
                                     <div className="col-md-12 form-group">
@@ -233,7 +234,7 @@ const ContactPage = () => {
                                     </div>
                                     <div className="col-md-12 form-group">
                                         <div className="text-center">
-                                            <button className="theme-btn btn-style-one" type="submit" name="submit-form"><span className="btn-title">SEND MESSAGE</span></button>
+                                            <button className="theme-btn btn-style-one" type="submit" ><span className="btn-title">SEND MESSAGE</span></button>
                                         </div>
                                     </div>
                                 </div>
