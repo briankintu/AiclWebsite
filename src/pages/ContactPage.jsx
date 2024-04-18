@@ -14,16 +14,30 @@ import BannerContact from '../components/sections/BannerContact'
 import Iframe from 'react-iframe'
 import mapimg from '../assets/images/resource/map-two.png'
 import Breadcrumb from '../components/Breadcrumb'
+import { useForm } from 'react-hook-form'
+import { useFrappeCreateDoc} from 'frappe-react-sdk'
 
 
 
 
 
 const ContactPage = () => {
-    const [isActive, setIsActive] = useState({
-        status: false,
-        key: 1,
-    })
+
+    const { register, handleSubmit, reset, formState: { errors } } = useForm()
+
+    const { createDoc, loading, error } = useFrappeCreateDoc()
+
+    const onSubmit =  (data) => {
+        createDoc('Contact Website Message', data)
+        .then(() => {
+         reset()
+         // Show an alert or notification here
+         alert('Thank you! for your Message');
+        })
+        
+     }
+
+    
 
     const handleToggle = (key) => {
         if (isActive.key === key) {
@@ -36,7 +50,10 @@ const ContactPage = () => {
                 key,
             })
         }
+
     }
+
+    
   return (
     <Layout headerStyle={5} footerStyle={5}   wrapperCls="home_5">
         <BannerContact />
@@ -136,35 +153,83 @@ const ContactPage = () => {
                                     <span className="right" />
                                 </div>
                             </div>
-                            <form method="post" action="sendemail.php" className="contact-form">
+                            <form onSubmit={handleSubmit(onSubmit)}  className="contact-form">
                                 <div className="row">
                                     <div className="col-lg-4 col-md-6 form-group">
-                                        <input type="text" name="firstname" placeholder="First Name" required />
+                                        <input type="text" {...register("firstname", {
+                                                required: true,
+                                                minLength: 5
+                                            })}
+                                            aria-invalid={errors.firstname ? "true" : "false"}
+                                                className="form-control"
+                                                placeholder=" First Name" />
+                                            {errors.firstname?.type === "required"
+                                                && (<p className="form-control" role="alert">Your FirstName is required</p>)} 
                                     </div>
                                     <div className="col-lg-4 col-md-6 form-group">
-                                        <input type="text" name="lastname" placeholder="Last Name" required />
+                                        <input type="text" {...register("lastname", {
+                                                required: true,
+                                                minLength: 5
+                                            })}
+                                            aria-invalid={errors.lastname ? "true" : "false"}
+                                                className="form-control"
+                                                placeholder=" Last Name" />
+                                                {errors.firstname?.type === "required"
+                                                && (<p className="form-control" role="alert">Your LastName is required</p>)} 
                                     </div>
                                     <div className="col-lg-4 col-md-6 form-group">
-                                        <input type="email" name="email" placeholder="Email Address" required />
+                                        <input type="email" {...register("emailaddress", {
+                                                required: "Email Address is required"
+                                            })} 
+                                            aria-invalid={errors.emailaddress ? "true" : "false"}
+                                                className="form-control" 
+                                                placeholder="Email Address" />
+                                            {errors.emailaddress 
+                                            && <p role="alert">{errors.emailaddress.message}</p>}
                                     </div>
                                     <div className="col-lg-4 col-md-6 form-group">
-                                        <input type="text" name="phone" placeholder="Phone" required />
+                                        <input type="text" {...register("phone", {
+                                                required: true,
+                                                minLength: 5
+                                            })}
+                                            aria-invalid={errors.phone ? "true" : "false"}
+                                                className="form-control"
+                                                placeholder=" Phone Number" />
+                                                {errors.phone?.type === "required"
+                                                && (<p className="form-control" role="alert">Your Phone Number is required</p>)} 
                                     </div>
                                     <div className="col-lg-4 col-md-6 form-group">
-                                        <input type="text" name="website" placeholder="Website" required />
+                                        <input type="text" {...register("website", {
+                                                required: true,
+                                                minLength: 5
+                                            })}
+                                           
+                                                className="form-control"
+                                                placeholder=" Website(optional)" />
+                                               
                                     </div>
                                     <div className="col-lg-4 col-md-6 form-group">
                                         <select className="custom-select" name="subject">
                                             <option value="*">Discusss about</option>
-                                            <option value=".category-1">Business Aproach</option>
-                                            <option value=".category-2">Trades &amp; Stock Market</option>
-                                            <option value=".category-3">Strategy &amp; Planning</option>
-                                            <option value=".category-4">Software &amp; Research</option>
-                                            <option value=".category-5">Support &amp; Maintenance</option>
+                                            <option value=".category-1">Accounting and Finance Outsourcing</option>
+                                            <option value=".category-2">Agritech Solutions</option>
+                                            <option value=".category-3">Business Process and Technology Optimizaition</option>
+                                            <option value=".category-4">Call Center Setup</option>
+                                            <option value=".category-5">Custom Enterprise Resource Planning Application - CEPRA with ERPNEXT</option>
+                                            <option value=".category-6">Mobile App Development</option>
+                                            <option value=".category-7">Physical Security Information Management</option>
+                                            <option value=".category-8">Web App & Web Design Development</option>
+                                            <option value=".category-9">UI/UX Design</option>
+                                            <option value=".category-10">Others</option>
                                         </select>
                                     </div>
                                     <div className="col-md-12 form-group">
-                                        <textarea name="message" placeholder="Message goes here" />
+                                        <textarea {...register("message", {
+                                                required: true
+
+                                            })} aria-invalid={errors.message ? "true" : "false"}  className="form-control" placeholder="Message goes here" />
+                                            {errors.message?.type === "required"
+                                                && (<p className="form-control" role="alert">Message is misssing</p>)}
                                     </div>
                                     <div className="col-md-12 form-group">
                                         <div className="text-center">

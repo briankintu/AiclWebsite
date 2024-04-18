@@ -2035,7 +2035,7 @@ body .btn-style-one:hover {
     height: 100%;
     max-height: 100%;
     overflow-y: auto;
-    background: #F2F2F2;
+    background: #373434;
     padding: 0px 0px;
     z-index: 5;
     opacity: 0;
@@ -2101,7 +2101,7 @@ body .btn-style-one:hover {
     padding: 10px 25px;
     font-size: 15px;
     font-weight: 500;
-    color: #1F438C;
+    color: #F2F2F2;
     text-transform: uppercase;
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;

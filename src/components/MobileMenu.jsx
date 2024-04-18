@@ -28,26 +28,10 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                     <div className="menu-outer">
                         <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul className="navigation clearfix">
-                                <li className={isActive.key == 1 ? "dropdown current" : "dropdown"}><Link to="/">Home</Link>
-                                    <ul style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}>
-                                        <li><Link to="/">Home Business</Link></li>
-                                        <li><Link to="/index-2">Home Consulting</Link></li>
-                                        <li><Link to="/index-3">Home Corporate</Link></li>
-                                        <li><Link to="/index-4">Home Software</Link></li>
-                                        <li><Link to="/index-5">Home Finance</Link></li>
-                                        <li><Link to="/index-6">Home Law Firm</Link></li>
-                                        <li><Link to="/index-7">Home Insurance</Link></li>
-                                        <li><Link to="/index-8">Home Psychologist</Link></li>
-                                        <li><Link to="/index-9">Home Auto Repai</Link></li>
-                                        <li><Link to="/index-10">Home Movers and Packers</Link></li>
-                                        <li><Link to="/index-11">Home Visa Consultant</Link></li>
-                                        <li><Link to="/index-12">Home Online Course</Link></li>
-                                        <li><Link to="/index-13">Home Construction</Link></li>
-                                        <li><Link to="/index-14">Home Architecture</Link></li>
-                                        <li><Link to="/index-15">Home Digital Agency</Link></li>
-                                    </ul>
-                                    <div className={isActive.key == 1 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(1)}><span className="fa fa-angle-right" /></div></li>
-                                <li className={isActive.key == 2 ? "dropdown current" : "dropdown"}><Link to="/#">Company</Link>
+                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="/">About</Link></li>
+
+                                {/* <li className={isActive.key == 2 ? "dropdown current" : "dropdown"}><Link to="/#">Services</Link>
                                     <ul style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
                                         <li className={isActive.key == 8 ? "dropdown current" : "dropdown"}><Link to="/#">About Us</Link>
                                             <ul style={{ display: `${isActive.key == 8 ? "block" : "none"}` }}>
@@ -67,19 +51,41 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                             <div className={isActive.key == 9 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(9)}><span className="fa fa-angle-right" /></div></li>
                                     </ul>
                                     <div className={isActive.key == 2 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(2)}><span className="fa fa-angle-right" /></div>
-                                </li>
+                                </li> */}
                                 <li className={isActive.key == 3 ? "dropdown current" : "dropdown"}><Link to="/#">Services</Link>
                                     <ul style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
-                                        <li><Link to="/services">Our All Services</Link></li>
-                                        <li><Link to="/finance-restructuring">Finance &amp; Restructuring</Link></li>
-                                        <li><Link to="/audit-assurance">Audit &amp; Assurance</Link></li>
-                                        <li><Link to="/trades-stock-markets">Trades &amp; Stock Market</Link></li>
-                                        <li><Link to="/strategy-planning">Strategy &amp; Planning</Link></li>
-                                        <li><Link to="/software-research">Software &amp; Research</Link></li>
-                                        <li><Link to="/support-maintenance">Support &amp; Maintenance</Link></li>
+                                    <li><Link to="/business-process-and-technology-optimization">Business Process and Technology Optimizaiton</Link></li>
+                        <li><Link to="/customization-enterprise-resource-plannig">Customization Enterprise Resource Planning Application (CEPRA) with ERPNEXT</Link></li>
+                        <li><Link to="/mobile-app-development">Mobile App Development</Link></li>
+                        <li><Link to="/web-design-development">Web Design Development</Link></li>
+                        <li><Link to="/ui-ux-design">UI/UX Design</Link></li>
+                        <li><Link to="/physical-security-information-management">Physical Security Information Management</Link></li>
+                        <li><Link to="/call-center-setup">Call Center Setup</Link></li>
+                        <li><Link to="/accounting-finance-outsourcing">Accounting and Finance Outsourcing</Link></li>
+                        <li><Link to="/agritech-solutions">Agritech Solutions</Link></li>
                                     </ul>
                                     <div className={isActive.key == 3 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(3)}><span className="fa fa-angle-right" /></div></li>
-                                <li className={isActive.key == 4 ? "dropdown current" : "dropdown"}><Link to="/#">Pages</Link>
+
+                                    <li className={isActive.key == 3 ? "dropdown current" : "dropdown"}><Link to="/#">Products</Link>
+                                    <ul style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
+                                    <li><Link to="/ongea">Ongea </Link></li>
+                        <li><Link to="/kiganjani">Kiganjani</Link></li>
+                        <li><Link to="/angalia-duka">AngaliaDuka</Link></li>
+                        <li><Link to="/tovuti">Tovuti </Link></li>
+                        <li><Link to="/karakana">Karakana </Link></li>
+                        <li><Link to="/cepra-product">CEPRA </Link></li>
+                        <li><Link to="/akili-central">Akili Central </Link></li>
+                        <li><Link to="/shuleni">Shuleni</Link></li>
+                                    
+                                    </ul>
+                                    <div className={isActive.key == 3 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(3)}><span className="fa fa-angle-right" /></div></li>
+                                    <li><Link to="/">Contact</Link></li>
+                                    
+
+                                   
+
+
+                                {/* <li className={isActive.key == 4 ? "dropdown current" : "dropdown"}><Link to="/#">Pages</Link>
                                     <ul style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
                                         <li><Link to="/career">Career</Link></li>
                                         <li className={isActive.key == 10 ? "dropdown current" : "dropdown"}><Link to="/#">Contact</Link>
@@ -159,14 +165,21 @@ export default function MobileMenu({ isSidebar, handleMobileMenu, handleSidebar 
                                         <li><Link to="/checkout">Checkout</Link></li>
                                         <li><Link to="/account">My Account</Link></li>
                                     </ul>
-                                    <div className={isActive.key == 7 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(7)}><span className="fa fa-angle-right" /></div></li>
+                                    <div className={isActive.key == 7 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(7)}><span className="fa fa-angle-right" /></div></li> */}
                             </ul>
                         </div>
 
                     </div>
+                    
                     {/*Social Links*/}
                     <div className="social-links">
-                        <ul className="clearfix">
+                    <button className="theme-btn btn-style-one"><span className="btn-title">Desk Login</span></button>
+                    
+                        
+                    </div>
+                    <div className="social-links"><div className="link-btn"><a href="#" className="theme-btn btn-style-one"><span className="btn-title">Book a Demo</span></a></div></div>
+                    <div className="social-links">
+                    <ul className="clearfix">
                             <li><Link to="/https://twitter.com/AngaliaInvest"><span className="fab fa-twitter" /></Link></li>
                             <li><Link to="/https://www.facebook.com/angaliatz"><span className="fab fa-facebook-square" /></Link></li>
                             <li><Link to="/https://www.instagram.com/angaliainvestmentconsortium/"><span className="fab fa-instagram" /></Link></li>
