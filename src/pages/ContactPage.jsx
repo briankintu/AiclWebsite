@@ -28,14 +28,14 @@ const ContactPage = () => {
     const { createDoc, loading, error } = useFrappeCreateDoc()
 
     const onSubmit =  (data) => {
-        createDoc('Contact Website Message', data)
-        .then(() => {
+         createDoc('Contact Website Message', data)
+         .then(() => {
          reset()
-         // Show an alert or notification here
+          // Show an alert or notification here
          alert('Thank you! for your Message');
         })
         
-     }
+      }
 
     
 
@@ -209,7 +209,7 @@ const ContactPage = () => {
                                                
                                     </div>
                                     <div className="col-lg-4 col-md-6 form-group">
-                                        <select className="custom-select" {...register("gender")} >
+                                        <select className="custom-select" {...register("discuss")} >
                                             
                                             <option value="" disabled>Discuss About..</option>
                                             <option value="Accounting and Finance Outsourcing">Accounting and Finance Outsourcing</option>
